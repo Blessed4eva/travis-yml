@@ -221,6 +221,14 @@ module Travis
             !!attrs[:export]
           end
 
+          def error_on_alert(value = true)
+            attrs[:error_on_alert] = value
+          end
+
+          def error_on_alert?
+            attrs[:error_on_alert].present?
+          end
+
           def export(obj = true)
             attrs[:export] = obj
           end

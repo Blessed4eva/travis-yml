@@ -9,7 +9,7 @@ module Travis
 
           def define
             map :api_url, to: :str, required: true
-            map :token, to: :secure, strict: true, required: true
+            map :token, to: :secure, strict: true, required: true, error_on_alert: true
             map :secrets, to: :vault_secrets
 
             export
